@@ -1,36 +1,36 @@
-# OpenClaude VS Code Extension
+# Extensão OpenClaude para VS Code
 
-A practical VS Code companion for OpenClaude with a project-aware **Control Center**, predictable terminal launch behavior, and quick access to useful OpenClaude workflows.
+Um companheiro prático do VS Code para o OpenClaude com um **Centro de Controle** (Control Center) sensível ao projeto, comportamento previsível de inicialização do terminal e acesso rápido a fluxos de trabalho úteis do OpenClaude.
 
-## Features
+## Recursos
 
-- **Real Control Center status** in the Activity Bar:
-  - whether the configured `openclaude` command is installed
-  - the launch command being used
-  - whether the launch shim injects `CLAUDE_CODE_USE_OPENAI=1`
-  - the current workspace folder
-  - the launch cwd that will be used for terminal sessions
-  - whether `.openclaude-profile.json` exists in the current workspace root
-  - a conservative provider summary derived from the workspace profile or known environment flags
-- **Project-aware launch behavior**:
-  - `Launch OpenClaude` launches from the active editor's workspace when possible
-  - falls back to the first workspace folder when needed
-  - avoids launching from an arbitrary default cwd when a project is open
-- **Practical sidebar actions**:
-  - Launch OpenClaude
-  - Launch in Workspace Root
-  - Open Workspace Profile
-  - Open Repository
-  - Open Setup Guide
-  - Open Command Palette
-- **Built-in dark theme**: `OpenClaude Terminal Black`
+- **Status real do Centro de Controle** na Barra de Atividades (Activity Bar):
+  - se o comando `openclaude` configurado está instalado
+  - o comando de inicialização sendo usado
+  - se o shim de inicialização injeta `CLAUDE_CODE_USE_OPENAI=1`
+  - a pasta da área de trabalho (workspace) atual
+  - o diretório de trabalho atual (cwd) de inicialização que será usado para as sessões do terminal
+  - se `.openclaude-profile.json` existe na raiz da área de trabalho atual
+  - um resumo conservador do provedor derivado do perfil da área de trabalho ou de flags de ambiente conhecidas
+- **Comportamento de inicialização sensível ao projeto**:
+  - `Launch OpenClaude` é iniciado a partir da área de trabalho do editor ativo, quando possível
+  - recorre à primeira pasta da área de trabalho quando necessário
+  - evita iniciar a partir de um diretório de trabalho padrão arbitrário quando um projeto está aberto
+- **Ações práticas na barra lateral**:
+  - Launch OpenClaude (Iniciar OpenClaude)
+  - Launch in Workspace Root (Iniciar na Raiz da Área de Trabalho)
+  - Open Workspace Profile (Abrir Perfil da Área de Trabalho)
+  - Open Repository (Abrir Repositório)
+  - Open Setup Guide (Abrir Guia de Configuração)
+  - Open Command Palette (Abrir Paleta de Comandos)
+- **Tema escuro integrado**: `OpenClaude Terminal Black`
 
-## Requirements
+## Requisitos
 
 - VS Code `1.95+`
-- `openclaude` available in your terminal PATH (`npm install -g @gitlawb/openclaude`)
+- `openclaude` disponível no PATH do seu terminal (`npm install -g @gitlawb/openclaude`)
 
-## Commands
+## Comandos
 
 - `OpenClaude: Open Control Center`
 - `OpenClaude: Launch in Terminal`
@@ -39,32 +39,31 @@ A practical VS Code companion for OpenClaude with a project-aware **Control Cent
 - `OpenClaude: Open Setup Guide`
 - `OpenClaude: Open Workspace Profile`
 
-## Settings
+## Configurações
 
-- `openclaude.launchCommand` (default: `openclaude`)
-- `openclaude.terminalName` (default: `OpenClaude`)
-- `openclaude.useOpenAIShim` (default: `false`)
+- `openclaude.launchCommand` (padrão: `openclaude`)
+- `openclaude.terminalName` (padrão: `OpenClaude`)
+- `openclaude.useOpenAIShim` (padrão: `false`)
 
-`openclaude.useOpenAIShim` only injects `CLAUDE_CODE_USE_OPENAI=1` into terminals launched by the extension. It does not guess or configure a provider by itself.
+`openclaude.useOpenAIShim` apenas injeta `CLAUDE_CODE_USE_OPENAI=1` nos terminais iniciados pela extensão. Ele não adivinha ou configura um provedor por si próprio.
 
-## Notes on Status Detection
+## Notas sobre a Detecção de Status
 
-- Provider status prefers the real workspace `.openclaude-profile.json` file when present.
-- If no saved profile exists, the extension falls back to known environment flags available to the VS Code extension host.
-- If the source of truth is unclear, the extension shows `unknown` instead of guessing.
+- O status do provedor prefere o arquivo `.openclaude-profile.json` real da área de trabalho, quando presente.
+- Se não houver nenhum perfil salvo, a extensão recorre a flags de ambiente conhecidas, disponíveis para o host de extensão do VS Code.
+- Se a fonte da verdade não for clara, a extensão mostra `unknown` (desconhecido) em vez de adivinhar.
 
-## Development
+## Desenvolvimento
 
-From this folder:
+A partir desta pasta:
 
 ```bash
 npm run test
 npm run lint
 ```
 
-To package (optional):
+Para empacotar (opcional):
 
 ```bash
 npm run package
 ```
-
