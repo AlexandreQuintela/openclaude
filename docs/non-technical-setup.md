@@ -1,14 +1,14 @@
-# OpenClaude for Non-Technical Users
+# OpenClaude para Usuários Não Técnicos
 
-This guide is for people who want the easiest setup path.
+Este guia é para pessoas que desejam o caminho de configuração mais fácil.
 
-You do not need to build from source. You do not need Bun. You do not need to understand the full codebase.
+Você não precisa compilar a partir do código-fonte. Você não precisa do Bun. Você não precisa entender toda a base de código.
 
-If you can copy and paste commands into a terminal, you can set this up.
+Se você consegue copiar e colar comandos em um terminal, você consegue configurar isso.
 
-## What OpenClaude Does
+## O Que o OpenClaude Faz
 
-OpenClaude lets you use an AI coding assistant with different model providers such as:
+O OpenClaude permite que você use um assistente de codificação de IA com diferentes provedores de modelo, como:
 
 - OpenAI
 - DeepSeek
@@ -16,101 +16,101 @@ OpenClaude lets you use an AI coding assistant with different model providers su
 - Ollama
 - Codex
 
-For most first-time users, OpenAI is the easiest option.
+Para a maioria dos usuários de primeira viagem, o OpenAI é a opção mais fácil.
 
-## Before You Start
+## Antes de Começar
 
-You need:
+Você precisa de:
 
-1. Node.js 20 or newer installed
-2. A terminal window
-3. An API key from your provider, unless you are using a local model like Ollama
+1. Node.js 20 ou mais recente instalado
+2. Uma janela de terminal
+3. Uma chave de API do seu provedor, a menos que você esteja usando um modelo local como o Ollama
 
-## Fastest Path
+## Caminho Mais Rápido
 
-1. Install OpenClaude with npm
-2. Set 3 environment variables
-3. Run `openclaude`
+1. Instale o OpenClaude com o npm
+2. Defina 3 variáveis de ambiente
+3. Execute `openclaude`
 
-## Choose Your Operating System
+## Escolha Seu Sistema Operacional
 
-- Windows: [Windows Quick Start](quick-start-windows.md)
-- macOS / Linux: [macOS / Linux Quick Start](quick-start-mac-linux.md)
+- Windows: [Guia de Início Rápido para Windows](quick-start-windows.md)
+- macOS / Linux: [Guia de Início Rápido para macOS / Linux](quick-start-mac-linux.md)
 
-## Which Provider Should You Choose?
+## Qual Provedor Você Deve Escolher?
 
 ### OpenAI
 
-Choose this if:
+Escolha este se:
 
-- you want the easiest setup
-- you already have an OpenAI API key
+- você quer a configuração mais fácil
+- você já tem uma chave de API da OpenAI
 
 ### Ollama
 
-Choose this if:
+Escolha este se:
 
-- you want to run models locally
-- you do not want to depend on a cloud API for testing
+- você quer executar modelos localmente
+- você não quer depender de uma API na nuvem para testes
 
 ### Codex
 
-Choose this if:
+Escolha este se:
 
-- you already use the Codex CLI
-- you already have Codex or ChatGPT auth configured
+- você já usa o Codex CLI
+- você já tem a autenticação do Codex ou do ChatGPT configurada
 
-## What Success Looks Like
+## O Que é Considerado Sucesso
 
-After you run `openclaude`, the CLI should start and wait for your prompt.
+Depois que você executar o `openclaude`, a CLI deve iniciar e aguardar o seu prompt.
 
-At that point, you can ask it to:
+Nesse ponto, você pode pedir para ele:
 
-- explain code
-- edit files
-- run commands
-- review changes
+- explicar o código
+- editar arquivos
+- executar comandos
+- revisar alterações
 
-## Common Problems
+## Problemas Comuns
 
-### `openclaude` command not found
+### Comando `openclaude` não encontrado
 
-Cause:
+Causa:
 
-- npm installed the package, but your terminal has not refreshed yet
+- o npm instalou o pacote, mas o seu terminal ainda não foi atualizado
 
-Fix:
+Correção:
 
-1. Close the terminal
-2. Open a new terminal
-3. Run `openclaude` again
+1. Feche o terminal
+2. Abra um novo terminal
+3. Execute `openclaude` novamente
 
-### Invalid API key
+### Chave de API inválida
 
-Cause:
+Causa:
 
-- the key is wrong, expired, or copied incorrectly
+- a chave está errada, expirada ou copiada incorretamente
 
-Fix:
+Correção:
 
-1. Get a fresh key from your provider
-2. Paste it again carefully
-3. Re-run `openclaude`
+1. Obtenha uma nova chave do seu provedor
+2. Cole-a novamente com cuidado
+3. Execute `openclaude` novamente
 
-### Ollama not working
+### Ollama não está funcionando
 
-Cause:
+Causa:
 
-- Ollama is not installed or not running
+- o Ollama não está instalado ou não está em execução
 
-Fix:
+Correção:
 
-1. Install Ollama from `https://ollama.com/download`
-2. Start Ollama
-3. Try again
+1. Instale o Ollama em `https://ollama.com/download`
+2. Inicie o Ollama
+3. Tente novamente
 
-## Want More Control?
+## Quer Mais Controle?
 
-If you want source builds, advanced provider profiles, diagnostics, or Bun-based workflows, use:
+Se você quiser compilações de origem, perfis de provedor avançados, diagnósticos ou fluxos de trabalho baseados no Bun, use:
 
-- [Advanced Setup](advanced-setup.md)
+- [Configuração Avançada](advanced-setup.md)

@@ -1,31 +1,31 @@
-# OpenClaude Quick Start for macOS and Linux
+# Guia de Início Rápido do OpenClaude para macOS e Linux
 
-This guide uses a standard shell such as Terminal, iTerm, bash, or zsh.
+Este guia usa um shell padrão como Terminal, iTerm, bash ou zsh.
 
-## 1. Install Node.js
+## 1. Instale o Node.js
 
-Install Node.js 20 or newer from:
+Instale o Node.js 20 ou mais recente em:
 
 - `https://nodejs.org/`
 
-Then check it:
+Em seguida, verifique:
 
 ```bash
 node --version
 npm --version
 ```
 
-## 2. Install OpenClaude
+## 2. Instale o OpenClaude
 
 ```bash
 npm install -g @gitlawb/openclaude
 ```
 
-## 3. Pick One Provider
+## 3. Escolha um Provedor
 
-### Option A: OpenAI
+### Opção A: OpenAI
 
-Replace `sk-your-key-here` with your real key.
+Substitua `sk-your-key-here` pela sua chave real.
 
 ```bash
 export CLAUDE_CODE_USE_OPENAI=1
@@ -35,7 +35,7 @@ export OPENAI_MODEL=gpt-4o
 openclaude
 ```
 
-### Option B: DeepSeek
+### Opção B: DeepSeek
 
 ```bash
 export CLAUDE_CODE_USE_OPENAI=1
@@ -46,13 +46,13 @@ export OPENAI_MODEL=deepseek-chat
 openclaude
 ```
 
-### Option C: Ollama
+### Opção C: Ollama
 
-Install Ollama first from:
+Instale o Ollama primeiro em:
 
 - `https://ollama.com/download`
 
-Then run:
+Em seguida, execute:
 
 ```bash
 ollama pull llama3.1:8b
@@ -64,80 +64,80 @@ export OPENAI_MODEL=llama3.1:8b
 openclaude
 ```
 
-No API key is needed for Ollama local models.
+Nenhuma chave de API é necessária para os modelos locais do Ollama.
 
-### Option D: LM Studio
+### Opção D: LM Studio
 
-Install LM Studio first from:
+Instale o LM Studio primeiro em:
 
 - `https://lmstudio.ai/`
 
-Then in LM Studio:
+Em seguida, no LM Studio:
 
-1. Download a model (e.g., Llama 3.1 8B, Mistral 7B)
-2. Go to the "Developer" tab
-3. Select your model and enable the server via the toggle
+1. Baixe um modelo (por exemplo, Llama 3.1 8B, Mistral 7B)
+2. Vá para a aba "Developer"
+3. Selecione seu modelo e ative o servidor através do botão de alternância (toggle)
 
-Then run:
+Em seguida, execute:
 
 ```bash
 export CLAUDE_CODE_USE_OPENAI=1
 export OPENAI_BASE_URL=http://localhost:1234/v1
 export OPENAI_MODEL=your-model-name
-# export OPENAI_API_KEY=lmstudio  # optional: some users need a dummy key
+# export OPENAI_API_KEY=lmstudio  # opcional: alguns usuários precisam de uma chave fictícia
 
 openclaude
 ```
 
-Replace `your-model-name` with the model name shown in LM Studio.
+Substitua `your-model-name` pelo nome do modelo mostrado no LM Studio.
 
-No API key is needed for LM Studio local models (but uncomment the `OPENAI_API_KEY` line if you hit auth errors).
+Nenhuma chave de API é necessária para os modelos locais do LM Studio (mas descomente a linha `OPENAI_API_KEY` se você encontrar erros de autenticação).
 
-## 4. If `openclaude` Is Not Found
+## 4. Se o `openclaude` Não For Encontrado
 
-Close the terminal, open a new one, and try again:
+Feche o terminal, abra um novo e tente novamente:
 
 ```bash
 openclaude
 ```
 
-## 5. If Your Provider Fails
+## 5. Se Seu Provedor Falhar
 
-Check the basics:
+Verifique o básico:
 
-### For OpenAI or DeepSeek
+### Para OpenAI ou DeepSeek
 
-- make sure the key is real
-- make sure you copied it fully
+- certifique-se de que a chave é real
+- certifique-se de que você a copiou completamente
 
-### For Ollama
+### Para Ollama
 
-- make sure Ollama is installed
-- make sure Ollama is running
-- make sure the model was pulled successfully
+- certifique-se de que o Ollama está instalado
+- certifique-se de que o Ollama está em execução
+- certifique-se de que o modelo foi baixado (pulled) com sucesso
 
-### For LM Studio
+### Para LM Studio
 
-- make sure LM Studio is installed
-- make sure LM Studio is running
-- make sure the server is enabled (toggle on in the "Developer" tab)
-- make sure a model is loaded in LM Studio
-- make sure the model name matches what you set in `OPENAI_MODEL`
+- certifique-se de que o LM Studio está instalado
+- certifique-se de que o LM Studio está em execução
+- certifique-se de que o servidor está ativado (botão de alternância ligado na aba "Developer")
+- certifique-se de que um modelo está carregado no LM Studio
+- certifique-se de que o nome do modelo corresponde ao que você definiu em `OPENAI_MODEL`
 
-## 6. Updating OpenClaude
+## 6. Atualizando o OpenClaude
 
 ```bash
 npm install -g @gitlawb/openclaude@latest
 ```
 
-## 7. Uninstalling OpenClaude
+## 7. Desinstalando o OpenClaude
 
 ```bash
 npm uninstall -g @gitlawb/openclaude
 ```
 
-## Need Advanced Setup?
+## Precisa de Configuração Avançada?
 
 Use:
 
-- [Advanced Setup](advanced-setup.md)
+- [Configuração Avançada](advanced-setup.md)
